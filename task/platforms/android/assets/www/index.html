@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" charset="utf-8" src=".js"></script> 
+  <style type="text/css">
+  .btn
+  {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.16), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  	}
+     .card a
+    {
+      margin-right: 0px !important;
+    }
+     .iterate{
+    -webkit-animation: iteratemove 1s ;
+    }
+    @-webkit-keyframes iteratemove {
+        0%   {-webkit-transform:  translate(0px,1500px)  ;}
+        100% {-webkit-transform:  translate(0px,0px)  ;}
+    }
+  	</style>
+</head>
+<body>
+      <div id="header" style="position:fixed; top:0px; left:0px; height:60px; right:0px;z-index:100;" class="red lighten-2"> 
+         <div style="width:100%">
+             <div style="padding:5px;font-size:22px;color:#fff;float:left;width:80%;padding-top:18px;padding-left:15px;" align="">
+                   Cards
+              </div>
+          </div>
+      </div>
+      
+      <div class="row image" style="margin-bottom:0px !important;display:none;padding-top:70px;">
+        <div class="col s12 m12" >
+          <div class="card" >
+            <div class="card-image" >
+              <img src="images/richmedia.jpg">
+            </div>
+           <div class="card-content center" style="padding:0px;">
+              <a class="btn-floating btn-large waves-effect waves-light pink" style="margin-bottom:7px;"><i class="mdi-action-home"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row iterate" style="padding-top:70px;margin-bottom:0px !important;display:none;" >
+        <div class="col s12 m12">
+          
+          <div class="card">
+             <div>
+                <ul class="collection" style="border:0px;border-radius:0px;">
+				    <li class="collection-item avatar" style="height:60px;">
+				      <img src="images/logo.jpg" alt="" class="circle" >
+				      <span class="title">Mute</span>
+				      <p style="color:#bdbdbd;font-weight:bold;">Hive</p>
+				    </li>
+				</ul>
+             </div>
+            <div class="card-image">
+              <img src="images/richmedia.jpg">
+            </div>
+            <div class="card-content" style="">
+                 <span>Hello World</span>
+
+            </div>
+            <div class="card-action" style="padding-bottom:5px;margin-bottom:0px;padding-left:0px;padding-right:0px;">
+            <div class="row" style="margin-bottom:0px !important;">
+              <div class="col s1 ">
+               <span style="font-size:25px;" class="pink lighten-3">&hearts;</span>
+
+              </div>
+              <div class="col s1" style="padding-top:5px;">
+                    
+               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYhe2VOwoCMRRFz3QuQERXIK7BXtyChTKLsdLGlekGrFzBgCCCRawCKSaT/7xB58Arb84NDxIY+TFmQyighlBAARvpAgr4SBfQ0wsV8LAUUMCqhHTfIWybJpc4RJp1Jalic6Yh4iazXM+971sHrWJbUPx2yS8F5WuX/FBQ7qTyOOQKzC1520voJacjvPPMtxWofeXPlvDCN2wpEIQZjP3FzAJBmLc/Rcp1gXNMUMuPCfIkFPCSkt+I2FlOFDCRLiDKUrrAyH/zBZRK6Q4UnroFAAAAAElFTkSuQmCC" style="height:25px;" class="pink lighten-4"/>
+              </div>
+              <div class="col s10" align="right">
+                     
+              <a class="pink lighten-4 btn white-text" >MORE</a>
+              <a class="pink lighten-3 btn white-text" >INFO</a>
+
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+      
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript">
+  
+  $(document).ready(function()
+  {
+    var temp=$(".iterate").html()
+     for(var i=0;i<4;i++)
+     {
+      $(".iterate").append(temp)
+     }
+     $(".iterate").show()
+
+     $(".btn").click(function(){
+       $(".iterate").hide();
+       $(".image").fadeIn(2000);
+     });
+
+     $(".btn-floating").click(function(){
+       $(".image").fadeOut();
+       $(".iterate").show();
+     });
+    
+  })
+</script>
+</html>
